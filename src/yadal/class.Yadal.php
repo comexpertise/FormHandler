@@ -109,7 +109,7 @@ class Yadal
      * @param string $db: the database we are using
      * @author Teye Heimans
      */
-    function Yadal( $db = null )
+    function __construct( $db = null )
     {
         if( !is_null( $db ) )
         {

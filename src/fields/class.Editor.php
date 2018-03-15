@@ -12,9 +12,9 @@
 
 class Editor extends TextArea
 {
-	function Editor( $oForm, $sName )
+	function __construct( $oForm, $sName )
 	{
-		parent::TextArea( $oForm, $sName );	
+		parent::__construct( $oForm, $sName );
 		
 		static $bSetJS = false;
 

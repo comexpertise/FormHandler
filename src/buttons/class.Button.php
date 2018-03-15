@@ -28,7 +28,7 @@ class Button
      * @access public
      * @author Teye Heimans
      */
-    function Button(&$oForm, $sName)
+    function __construct(&$oForm, $sName)
     {
         // set the button name and caption
         $this->_oForm    = $oForm;

@@ -27,10 +27,10 @@ class TextArea extends Field {
      * @author Teye Heimans
      * @access public
      */
-    function TextArea( &$oform, $sName )
+    function __construct( &$oform, $sName )
     {
         // call the constructor of the Field class
-        parent::Field( $oform, $sName );
+        parent::__construct( $oform, $sName );
 
         $this->setCols( 40 );
         $this->setRows( 7 );

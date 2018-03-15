@@ -14,7 +14,7 @@ class AjaxValidator
 {
 	static $bScript = true;
 
-	function AjaxValidator( $bScript = true  )
+	function __construct( $bScript = true  )
 	{
 		self::$bScript = $bScript;
 	}

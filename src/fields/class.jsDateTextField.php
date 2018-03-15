@@ -25,9 +25,9 @@ class jsDateTextField extends DateTextField
      * @author Thomas Branius
      * @since 16-03-2010
      */
-	function jsDateTextField( &$oForm, $sName, $sMask = null, $bParseOtherPresentations = false, $bIncludeJS )
+	function __construct( &$oForm, $sName, $sMask = null, $bParseOtherPresentations = false, $bIncludeJS )
 	{
-		parent::DateTextField( $oForm, $sName, $sMask, $bParseOtherPresentations);
+		parent::__construct( $oForm, $sName, $sMask, $bParseOtherPresentations);
 		
 		static $bSetJS = false;
 

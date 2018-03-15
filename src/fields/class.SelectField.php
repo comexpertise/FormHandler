@@ -26,10 +26,10 @@ class SelectField extends Field
      * @access public
      * @author Teye Heimans
      */
-	function SelectField( &$oForm, $sName )
+	function __construct( &$oForm, $sName )
 	{
 		// call the constructor of the Field class
-		parent::Field( $oForm, $sName );
+		parent::__construct( $oForm, $sName );
 
 		$this->setSize( 1 );
 		$this->useArrayKeyAsValue( FH_DEFAULT_USEARRAYKEY );

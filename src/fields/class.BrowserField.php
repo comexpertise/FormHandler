@@ -25,10 +25,10 @@ class BrowserField extends Field
      * @author Johan Wiegel
      * @access public
      */
-    function BrowserField( &$oForm, $sName, $sPath )
+    function __construct( &$oForm, $sName, $sPath )
     {
         // call the constructor of the Field class
-        parent::Field($oForm, $sName);
+        parent::__construct($oForm, $sName);
         $this->_path = $sPath;
 		$this->_form = $oForm;
         $this->setSize( 20 );

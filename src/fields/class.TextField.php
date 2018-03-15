@@ -25,10 +25,10 @@ class TextField extends Field
      * @author Teye Heimans
      * @access public
      */
-	function TextField( &$oForm, $sName )
+	function __construct( &$oForm, $sName )
 	{
 		// call the constructor of the Field class
-		parent::Field($oForm, $sName);
+		parent::__construct($oForm, $sName);
 
 		$this->setSize( 20 );
 		$this->setMaxlength( 0 );

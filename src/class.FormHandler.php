@@ -138,7 +138,7 @@ class FormHandler
      * @author Teye Heimans
      * @return FormHandler
      */
-	function FormHandler( $name = null, $action = null, $extra = null )
+	function __construct( $name = null, $action = null, $extra = null )
 	{
 		// initialisation
 		$this->_viewMode        = false;

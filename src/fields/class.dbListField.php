@@ -27,7 +27,7 @@ class dbListField extends ListField
      * @access public
      * @author Teye Heimans
      */
-    function dbListField( &$oForm, $sName, &$oDb, $sTable, $mFields, $sExtraSQL = null )
+    function __construct( &$oForm, $sName, &$oDb, $sTable, $mFields, $sExtraSQL = null )
     {
 		// make sure that the fields are set in an array
 		$aFields = !is_array($mFields) ? array( $mFields ) : $mFields;
@@ -72,7 +72,7 @@ class dbListField extends ListField
 		}
 
 		// call the constructor of the listfield with the new options
-		parent::ListField( $oForm, $sName, $aOptions );
+		parent::__construct( $oForm, $sName, $aOptions );
 
 		// if two fields are given, use the first field as value
 		$this->useArrayKeyAsValue( sizeof( $aFields) == 2 );

@@ -27,10 +27,10 @@ class jsDateField extends DateField
      * @return jsDateField
      * @author Teye Heimans
      */
-	function jsDateField(&$oForm, $sName, $sMask = null, $bRequired = null, $sInterval = null, $bIncludeJS )
+	function __construct(&$oForm, $sName, $sMask = null, $bRequired = null, $sInterval = null, $bIncludeJS )
 	{
 		// call the constructor of the datefield
-		parent::DateField( $oForm, $sName, $sMask, $bRequired, $sInterval );
+		parent::__construct( $oForm, $sName, $sMask, $bRequired, $sInterval );
 
 		// check if the mask contains all three fields..
 		$str = $this->_getFieldsFromMask();

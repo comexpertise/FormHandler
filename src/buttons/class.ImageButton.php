@@ -25,9 +25,9 @@ class ImageButton extends Button
      * @access public
      * @author Teye Heimans
      */
-    function ImageButton( &$oForm, $sName, $sImage)
+    function __construct( &$oForm, $sName, $sImage)
     {
-        $this->Button($oForm, $sName);
+        parent::__construct($oForm, $sName);
 
         // set the image we use
         $this->_sImage = $sImage;

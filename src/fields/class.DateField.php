@@ -30,7 +30,7 @@ class DateField extends Field
      * @access public
      * @author Teye Heimans
      */
-    function DateField( &$oForm, $sName, $sMask = null, $bRequired = null, $sInterval = null )
+    function __construct( &$oForm, $sName, $sMask = null, $bRequired = null, $sInterval = null )
     {
         // set the default date display
         $this -> setMask( !is_null( $sMask ) ? $sMask : FH_DATEFIELD_DEFAULT_DISPLAY );
@@ -159,7 +159,7 @@ class DateField extends Field
         }
 
         // call the Field constructor
-        parent::Field( $oForm, $sName );
+        parent::__construct( $oForm, $sName );
     }
 
     /**

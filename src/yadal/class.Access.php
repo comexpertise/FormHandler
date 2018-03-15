@@ -34,9 +34,9 @@ class Access extends Yadal
      * @access public
      * @author Teye Heimans
      */
-    function Access( $db )
+    function __construct( $db )
     {
-    	parent::Yadal( $db );
+        parent::__construct( $db );
         $this->_nameQuote = array('[',']');
     }
 

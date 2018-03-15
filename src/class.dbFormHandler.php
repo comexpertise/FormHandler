@@ -43,7 +43,7 @@ class dbFormHandler extends FormHandler
      * @author Teye Heimans
      * @return dbFormHandler
      */
-	function dbFormHandler( $name = null, $action = null, $extra = null )
+	function __construct( $name = null, $action = null, $extra = null )
 	{
 		$this->_sql           = array();
 		$this->_dbData        = array();
@@ -51,7 +51,7 @@ class dbFormHandler extends FormHandler
 		$this->_id            = array();
 		$this->dieOnQuery     = false;
 
-		parent::FormHandler( $name, $action, $extra );
+		parent::__construct( $name, $action, $extra );
 
 		$this->setEditName( FH_EDIT_NAME );
 		$this->initFHEditName();

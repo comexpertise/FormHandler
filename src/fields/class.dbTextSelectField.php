@@ -31,7 +31,7 @@ class dbTextSelectField extends TextSelectField
      * @since 22-10-2008
      * @author Johan Wiegel
      */
-	function dbTextSelectField( &$oForm, $sName, &$oDb, $sTable, $sField, $sExtraSQL = null, $sMask = null )
+	function __construct( &$oForm, $sName, &$oDb, $sTable, $sField, $sExtraSQL = null, $sMask = null )
 	{
 		// generate the query to retrieve the records
 		$sQuery =
@@ -63,7 +63,7 @@ class dbTextSelectField extends TextSelectField
 		    );
 		}
 			    // call the constructor of the selectfield
-		parent::TextSelectField( $oForm, $sName, $this->_aOptions );
+		parent::__construct( $oForm, $sName, $this->_aOptions );
 
  	}
 }

@@ -27,9 +27,9 @@ class TextSelectField extends TextField
      * @access public
      */
 
-	function TextSelectField( &$oForm, $sName, $aOptions )
+	function __construct( &$oForm, $sName, $aOptions )
 	{
-		parent::TextField($oForm, $sName);
+		parent::__construct($oForm, $sName);
 		
 		static $bSetJS = false;
 

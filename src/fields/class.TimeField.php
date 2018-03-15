@@ -26,7 +26,7 @@ class TimeField extends Field
      * @return TimeField
      * @author Teye Heimans
      */
-    function TimeField( &$oForm, $sName )
+    function __construct( &$oForm, $sName )
     {
         // set the default hour format
         $this->setHourFormat( FH_TIMEFIELD_DEFAULT_HOUR_FORMAT );
@@ -38,7 +38,7 @@ class TimeField extends Field
         $this->_oHour   = new SelectField($oForm, $sName.'_hour');
         $this->_oMinute = new SelectField($oForm, $sName.'_minute');
 
-        parent::Field( $oForm, $sName );
+        parent::__construct( $oForm, $sName );
 
         // posted or edit form? Then load the value of the time
         if( $oForm->isPosted() || (isset($oForm->edit) && $oForm->edit) )

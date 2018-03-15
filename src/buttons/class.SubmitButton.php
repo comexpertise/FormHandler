@@ -24,9 +24,9 @@ class SubmitButton extends Button
      * @access public
      * @author Teye Heimans
      */
-    function SubmitButton(&$oForm, $sName)
+    function __construct(&$oForm, $sName)
     {
-        $this->Button( $oForm, $sName );
+        parent::__construct( $oForm, $sName );
 
         $this->disableOnSubmit( FH_DEFAULT_DISABLE_SUBMIT_BTN );
 

@@ -32,7 +32,7 @@ class DateTextField extends TextField
      * @author Thomas Branius
      * @since 16-03-2010
      */
-	function DateTextField( &$oForm, $sName, $sMask = null, $bParseOtherPresentations = false )
+	function __construct( &$oForm, $sName, $sMask = null, $bParseOtherPresentations = false )
 	{
 		// set the default date display
 		$this->setMask( !is_null( $sMask ) ? $sMask : FH_DATETEXTFIELD_DEFAULT_DISPLAY );
@@ -42,7 +42,7 @@ class DateTextField extends TextField
 		//$this->setValidator(array(&$this, "validate"));
 
 		// call the constructor of the Field class
-		parent::TextField($oForm, $sName);
+		parent::__construct($oForm, $sName);
 	}
 
 	/**

@@ -28,7 +28,7 @@ class UploadField extends Field
      * @access public
      * @author Teye Heimans
      */
-	function UploadField( &$oForm, $sName, $aConfig )
+	function __construct( &$oForm, $sName, $aConfig )
 	{
 		require_once(FH_INCLUDE_DIR.'includes/mimeTypes.php');
 		static $bSetJS = false;

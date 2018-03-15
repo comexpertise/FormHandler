@@ -31,7 +31,7 @@ class ListField extends Field
      * @access public
      * @author Teye Heimans
      */
-    function ListField( &$oForm, $sName, $aOptions )
+    function __construct( &$oForm, $sName, $aOptions )
     {
     	$this->_mValue = array();
     	static $bSetJS = false;
@@ -46,7 +46,7 @@ class ListField extends Field
     	// set the options
         $this->_aOptions = $aOptions;
 
-        parent::Field( $oForm, $sName, $aOptions );
+        parent::__construct( $oForm, $sName, $aOptions );
 
         // make the fields of the listfield
         $this->_oHidden = new HiddenField($oForm, $sName);

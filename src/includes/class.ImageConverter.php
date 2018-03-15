@@ -28,7 +28,7 @@ class ImageConverter
      * @author Teye Heimans
      * @access public
      */
-    function ImageConverter( $sImage )
+    function __construct( $sImage )
     {
         $this->_bConstrainProportions = true;
         $this->_sError   = '';

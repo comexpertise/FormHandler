@@ -29,7 +29,7 @@ class CheckBox extends Field
      * @access public
      * @author Teye Heimans
      */
-	function CheckBox( &$oForm, $sName, $aOptions )
+	function __construct( &$oForm, $sName, $aOptions )
 	{
 		$this->_mValue = '';
 		$sName = str_replace('[]','', $sName);
@@ -37,7 +37,7 @@ class CheckBox extends Field
 		$this->_aOptions = $aOptions;
 
 		// call the constructor of the Field class
-		parent::Field( $oForm, $sName );
+		parent::__construct( $oForm, $sName );
 
 		$this->setMask 			 ( FH_DEFAULT_GLUE_MASK );
 		$this->useArrayKeyAsValue( FH_DEFAULT_USEARRAYKEY );

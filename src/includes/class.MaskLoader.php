@@ -27,7 +27,7 @@ class MaskLoader
      *
      * @return MaskLoader
      */
-    function MaskLoader()
+    function __construct()
     {
     }
 

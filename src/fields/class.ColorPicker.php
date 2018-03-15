@@ -26,9 +26,9 @@ class ColorPicker extends TextField
      * @access public
      * @author Rick den Haan
      */
-	function ColorPicker( &$oForm, $sName )
+	function __construct( &$oForm, $sName )
 	{
-		parent::TextField($oForm, $sName);
+		parent::__construct($oForm, $sName);
 
 		static $bSetJS = false;
 

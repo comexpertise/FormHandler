@@ -27,10 +27,10 @@ class RadioButton extends Field
      * @return RadioButton
      * @author Teye Heimans
      */
-    function RadioButton( &$oForm, $sName, $aOptions )
+    function __construct( &$oForm, $sName, $aOptions )
     {
         // call the constructor of the Field class
-        parent::Field( $oForm, $sName );
+        parent::__construct( $oForm, $sName );
 
         $this->_aOptions = $aOptions;
 

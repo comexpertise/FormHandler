@@ -24,10 +24,10 @@ class PassField extends TextField
      * @author Teye Heimans
      * @access public
      */
-    function PassField(&$oForm, $sName)
+    function __construct(&$oForm, $sName)
     {
         // call the constructor of the Field class
-        parent::Field($oForm, $sName);
+        parent::__construct($oForm, $sName);
 
         $this->_sPre = '';
         $this->setSize( 20 );

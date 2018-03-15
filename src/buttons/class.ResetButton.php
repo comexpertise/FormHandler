@@ -22,9 +22,9 @@ class ResetButton extends Button
      * @access public
      * @author Teye Heimans
      */
-    function ResetButton(&$oForm, $sName)
+    function __construct(&$oForm, $sName)
     {
-        $this->Button($oForm, $sName);
+        parent::__construct($oForm, $sName);
 
         $this->setCaption( $oForm->_text( 27 ) );
     }

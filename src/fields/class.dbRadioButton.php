@@ -29,10 +29,10 @@ class dbRadioButton extends RadioButton
      * @access public
      * @author Johan Wiegel
      */
-	function dbRadioButton( &$oForm, $sName, &$oDb, $sTable, $mFields, $sExtraSQL = null, $sMask = null )
+	function __construct( &$oForm, $sName, &$oDb, $sTable, $mFields, $sExtraSQL = null, $sMask = null )
 	{
 	    // call the constructor of the selectfield
-		parent::RadioButton( $oForm, $sName, '' );
+		parent::__construct( $oForm, $sName, '' );
 
 		// make sure that the fields are set in an array
 		$aFields = !is_array($mFields) ? array( $mFields ) : $mFields;

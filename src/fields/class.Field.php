@@ -34,7 +34,7 @@ class Field
      * @access public
      * @author Teye Heimans
      */
-	function Field( &$oForm, $sName )
+	function __construct( &$oForm, $sName )
 	{
 		// save the form and nome of the field
 		$this->_oForm = &$oForm;
@@ -240,7 +240,7 @@ class Field
 				{
 					$value = $this->getValue();
 					$value = (is_array ($value)) ? $value : trim ($value);
-					$error = call_user_func(array(&$this->_sValidator[0], $this->_sValidator[1]), $value );
+					$error = call_user_func(array(&$this->_sValidator[0], $this->_sValidator[1]), $value, $this->_oForm );
 				}
 				else
 				{
