@@ -330,6 +330,43 @@ class FormHandler
 		$this->_registerField( $name, $fld, $title );
 	}
 
+    /**
+     * FormHandler::textField()
+     *
+     * Creates a textfield on the form
+     *
+     * @param string $title: The title of the field
+     * @param string $name: The name of the field
+     * @param string $validator: The validator which should be used to validate the value of the field
+     * @param int $size: The size of the field
+     * @param int $maxlength: The allowed max input of the field
+     * @param string $extra: CSS, Javascript or other which are inserted into the HTML tag
+     * @return void
+     * @access public
+     * @author Teye Heimans
+     */
+    function emailField(
+        $title,
+        $name,
+        $validator = null,
+        $size      = null,
+        $maxlength = null,
+        $extra     = null)
+    {
+		require_once(FH_INCLUDE_DIR.'fields/class.TextField.php');
+        require_once(FH_INCLUDE_DIR.'fields/class.EmailField.php');
+
+        // create the field
+        $fld = new EmailField($this, $name);
+        if(!empty($validator)) $fld->setValidator( $validator );
+        if(!empty($size))      $fld->setSize( $size );
+        if(!empty($maxlength)) $fld->setMaxlength( $maxlength );
+        if(!empty($extra))     $fld->setExtra( $extra );
+
+        // register the field
+        $this->_registerField( $name, $fld, $title );
+    }
+
 	/**
      * FormHandler::captchaField()
      *
