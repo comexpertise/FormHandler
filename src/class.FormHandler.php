@@ -7,49 +7,49 @@
  */
 
 /******* BUILD IN VALIDATOR FUNCTIONS *******/
-define('FH_STRING',     'IsString',    true);	// any string that doesn't have control characters (ASCII 0 - 31) but spaces are allowed
-define('FH_ALPHA',      'IsAlpha',     true);	// only letters a-z and A-Z
-define('FH_DIGIT',      'IsDigit',     true);	// only numbers 0-9
-define('FH_ALPHA_NUM',  'IsAlphaNum',  true);	// letters and numbers
-define('FH_INTEGER',    'IsInteger',   true);	// only numbers 0-9 and an optional - (minus) sign (in the beginning only)
-define('FH_FLOAT',      'IsFloat',     true);	// like FH_INTEGER, only with , (comma)
-define('FH_FILENAME',   'IsFilename',  true);	// a valid file name (including dots but no slashes and other forbidden characters)
-define('FH_BOOL',       'IsBool',      true);	// a boolean (TRUE is either a case-insensitive "true" or "1". Everything else is FALSE)
-define('FH_VARIABLE',   'IsVariabele', true);	// a valid variable name (letters, digits, underscore)
-define('FH_PASSWORD',   'IsPassword',  true);	// a valid password (alphanumberic + some other characters but no spaces. Only allow ASCII 33 - 126)
-define('FH_URL',        'IsURL',       true);	// a valid URL
-define('FH_URL_HOST',   'IsURLHost',   true);   // a valid URL (http connection is used to check if url exists!)
-define('FH_EMAIL',      'IsEmail',     true);	// a valid email address (only checks for valid format: xxx@xxx.xxx)
-define('FH_EMAIL_HOST', 'IsEmailHost', true);   // like FH_EMAIL only with host check
-define('FH_TEXT',       'IsText',      true);	// like FH_STRING, but newline characters are allowed
-define('FH_NOT_EMPTY',  'notEmpty',    true);   // check if the value is not empty
-define('FH_NO_HTML',	'NoHTML',	   true);   // check if the value does not contain html
-define('FH_IP',		    'IsIp',		   true);   // check if the value is a valid ip adres (xxx.xxx.xxx.xxx:xxxx)
+define('FH_STRING',     'IsString');	// any string that doesn't have control characters (ASCII 0 - 31) but spaces are allowed
+define('FH_ALPHA',      'IsAlpha');	// only letters a-z and A-Z
+define('FH_DIGIT',      'IsDigit');	// only numbers 0-9
+define('FH_ALPHA_NUM',  'IsAlphaNum');	// letters and numbers
+define('FH_INTEGER',    'IsInteger');	// only numbers 0-9 and an optional - (minus) sign (in the beginning only)
+define('FH_FLOAT',      'IsFloat');	// like FH_INTEGER, only with , (comma)
+define('FH_FILENAME',   'IsFilename');	// a valid file name (including dots but no slashes and other forbidden characters)
+define('FH_BOOL',       'IsBool');	// a boolean (TRUE is either a case-insensitive "true" or "1". Everything else is FALSE)
+define('FH_VARIABLE',   'IsVariabele');	// a valid variable name (letters, digits, underscore)
+define('FH_PASSWORD',   'IsPassword');	// a valid password (alphanumberic + some other characters but no spaces. Only allow ASCII 33 - 126)
+define('FH_URL',        'IsURL');	// a valid URL
+define('FH_URL_HOST',   'IsURLHost');   // a valid URL (http connection is used to check if url exists!)
+define('FH_EMAIL',      'IsEmail');	// a valid email address (only checks for valid format: xxx@xxx.xxx)
+define('FH_EMAIL_HOST', 'IsEmailHost');   // like FH_EMAIL only with host check
+define('FH_TEXT',       'IsText');	// like FH_STRING, but newline characters are allowed
+define('FH_NOT_EMPTY',  'notEmpty');   // check if the value is not empty
+define('FH_NO_HTML',	'NoHTML');   // check if the value does not contain html
+define('FH_IP',		    'IsIp');   // check if the value is a valid ip adres (xxx.xxx.xxx.xxx:xxxx)
 
 // for dutch people
-define('FH_POSTCODE',   'IsPostcode',  true);   // valid dutch postcode (eg. 9999 AA)
-define('FH_PHONE',      'IsPhone',     true);   // valid dutch phone-number(eg. 058-2134778)
+define('FH_POSTCODE',   'IsPostcode');   // valid dutch postcode (eg. 9999 AA)
+define('FH_PHONE',      'IsPhone');   // valid dutch phone-number(eg. 058-2134778)
 
 // same as above, but with these the value is not required
-define('_FH_STRING',     '_IsString',    true);
-define('_FH_ALPHA',      '_IsAlpha',     true);
-define('_FH_DIGIT',      '_IsDigit',     true);
-define('_FH_ALPHA_NUM',  '_IsAlphaNum',  true);
-define('_FH_INTEGER',    '_IsInteger',   true);
-define('_FH_FLOAT',      '_IsFloat',     true);
-define('_FH_FILENAME',   '_IsFilename',  true);
-define('_FH_BOOL',       '_IsBool',      true);
-define('_FH_VARIABLE',   '_IsVariabele', true);
-define('_FH_PASSWORD',   '_IsPassword',  true);
-define('_FH_URL',        '_IsURL',       true);
-define('_FH_URL_HOST',   '_IsURLHost',   true);
-define('_FH_EMAIL',      '_IsEmail',     true);
-define('_FH_EMAIL_HOST', '_IsEmailHost', true);
-define('_FH_TEXT',       '_IsText',      true);
-define('_FH_POSTCODE',   '_IsPostcode',  true);
-define('_FH_PHONE',      '_IsPhone',     true);
-define('_FH_NO_HTML',	 '_NoHTML',	     true);
-define('_FH_IP',		 '_IsIp',		 true);
+define('_FH_STRING',     '_IsString');
+define('_FH_ALPHA',      '_IsAlpha');
+define('_FH_DIGIT',      '_IsDigit');
+define('_FH_ALPHA_NUM',  '_IsAlphaNum');
+define('_FH_INTEGER',    '_IsInteger');
+define('_FH_FLOAT',      '_IsFloat');
+define('_FH_FILENAME',   '_IsFilename');
+define('_FH_BOOL',       '_IsBool');
+define('_FH_VARIABLE',   '_IsVariabele');
+define('_FH_PASSWORD',   '_IsPassword');
+define('_FH_URL',        '_IsURL');
+define('_FH_URL_HOST',   '_IsURLHost');
+define('_FH_EMAIL',      '_IsEmail');
+define('_FH_EMAIL_HOST', '_IsEmailHost');
+define('_FH_TEXT',       '_IsText');
+define('_FH_POSTCODE',   '_IsPostcode');
+define('_FH_PHONE',      '_IsPhone');
+define('_FH_NO_HTML',	 '_NoHTML');
+define('_FH_IP',		 '_IsIp');
 
 // Mask for titles above the fields..
 // This is not used by default but can be handy for the users
