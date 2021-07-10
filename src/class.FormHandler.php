@@ -105,7 +105,7 @@ class FormHandler
 	var $_mask;             // string: the mask which should be used
 	var $_upload;           // array: contains the names of the uploadfields
 	var $_date;             // array: contains the names of the datefields
-	var $_onCorrect;        // string: the callback function when the form is correct
+	var $_onCorrect;        // string|array: the callback function when the form is correct
 	var $_add;              // array: contains the data which was added by the user
 	var $_focus;            // string: the field which should get the focus
 	var $_convert;          // array: fields which should be converted (eg. resizeimage or mergeimage)
@@ -2374,7 +2374,7 @@ class FormHandler
      *
      * Set the function which has to be called when the form is correct
      *
-     * @param string $callback: The name of the function
+     * @param string|array $callback: The name of the function
      * @return void
      * @access public
      * @author Teye Heimans
